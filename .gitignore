@@ -1,0 +1,32 @@
+node_modules/
+dist/
+dist-static/
+test-results/
+artifacts/
+.npm-cache/
+.pnpm-store/
+*.log
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+*.kdbx
+.npmrc.local
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Test/runtime caches
+.turbo/
+.vite/
+.cache/
+*.tsbuildinfo

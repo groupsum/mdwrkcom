@@ -1,0 +1,39 @@
+{
+  "name": "mdwrkcom",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.11.0",
+  "workspaces": [
+    "packages/content/*"
+  ],
+  "engines": {
+    "node": ">=20 <23",
+    "npm": ">=10",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "build": "npm run build -w @mdwrk/mdwrkcom-content-pack",
+    "typecheck": "npm run typecheck -w @mdwrk/mdwrkcom-content-pack",
+    "lint": "npm run typecheck",
+    "ci:install": "npm install --ignore-scripts",
+    "test": "npm run test -w @mdwrk/mdwrkcom-content-pack",
+    "ci": "npm run build && npm run typecheck && npm run test"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "description": "mdwrk.com first-party content pack built with MdWrk Pages.",
+  "homepage": "https://mdwrk.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/groupsum/mdwrkcom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/groupsum/mdwrkcom/issues"
+  },
+  "license": "Apache-2.0",
+  "author": "Jacob Stewart <jacob@swarmauri.com>",
+  "dependencies": {
+    "@mdwrk/lander-content-contract": "^0.1.2"
+  }
+}
